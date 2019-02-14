@@ -1137,6 +1137,8 @@
 	var c = l.VBP;
 	r.infinitives = c
 }, function (e, r, t) {
+
+	// alert(document.getElementById("verbs-input").value);
 	function i(e, r) {
 		var t = document.getElementById(e).value;
 		setInterval(function () {
@@ -1144,32 +1146,25 @@
 		}, 20)
 	}
 
-	function a(e) {
-		return "<span>" + e + "</span>"
+	function a(type, e) {
+		return "'" + type + "':'" + e + "'";
 	}
 	const s = t(6).Inflectors;
-	i("nouns-input", function () {
-		var e = document.getElementById("nouns-input").value.split(" ")[0];
-		if (e) {
-			var r = new s(e),
-				t = a("is plural: " + r.isPlural()) + a("is singular: " + r.isSingular()) + a("is countable: " + r.isCountable()) + "<br>" + a("to plural: " + r.toPlural()) + a("to singular: " + r.toSingular());
-			document.getElementById("nouns-output").innerHTML = t
-		}
-	}), i("verbs-input", function () {
-		var e = document.getElementById("verbs-input").value.split(" ")[0];
-		if (e) {
-			var r = new s(e),
-				t = a(r.toPresent()) + a(r.toPast()) + a(r.toPastParticiple()) + "<br>" + a(r.toGerund()) + a(r.toPresentS());
-			document.getElementById("verbs-output").innerHTML = t
-		}
-	}), i("adj-input", function () {
-		var e = document.getElementById("adj-input").value.split(" ")[0];
-		if (e) {
-			var r = new s(e),
-				t = a(r.comparative()) + a(r.superlative());
-			document.getElementById("adj-output").innerHTML = t
-		}
-	})
+	// i("verbs-input", function () {
+	// 	var e = document.getElementById("verbs-input").value;
+	// 	if (e) {
+	// 		var r = new s(e),
+	// 			t = a(r.toPresent()) + a(r.toPast()) + a(r.toPastParticiple()) + "<br>" + a(r.toGerund()) + a(r.toPresentS());
+	// 		document.getElementById("verbs-output").innerHTML = t
+	// 	}
+	// })
+	var e = document.getElementById("verbs-input").innerHTML;
+	if (e) {
+		var r = new s(e),
+			json = "{" + a("toPresent", r.toPresent()) + a("toPast", r.toPast()) + a("toPastParticiple", r.toPastParticiple()) + a("toGerund", r.toGerund()) + a("toPresentS", r.toPresentS()) + "}",
+			t = a(r.toPresent()) + a(r.toPast()) + a(r.toPastParticiple()) + "<br>" + a(r.toGerund()) + a(r.toPresentS());
+		document.getElementById("verbs-output").innerHTML = json
+	}
 }, function (e, r, t) {
 	"use strict";
 	r.__esModule = !0, r.irregulars = {
