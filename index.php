@@ -78,21 +78,6 @@
 	<body>
 		<h1>en-inflectors demo</h1>
 		<div class="demo">
-			<h2>Nouns</h2>
-			<div class="input">
-				<input id="nouns-input" placeholder="write your noun here">
-			</div>
-			<div id="nouns-output" class="output">
-			</div>
-			<div class="try">
-				try:
-					<a onclick="document.getElementById('nouns-input').value=this.innerHTML;">river</a>
-					<a onclick="document.getElementById('nouns-input').value=this.innerHTML;">octopodes</a>
-					<a onclick="document.getElementById('nouns-input').value=this.innerHTML;">silo</a>
-					<a onclick="document.getElementById('nouns-input').value=this.innerHTML;">matrix</a>
-			</div>
-		</div>
-		<div class="demo">
 			<h2>Verbs</h2>
 			<div class="input">
 				<input id="verbs-input" placeholder="write your verb here">
@@ -105,21 +90,6 @@
 					<a onclick="document.getElementById('verbs-input').value=this.innerHTML;">dying</a>
 					<a onclick="document.getElementById('verbs-input').value=this.innerHTML;">semi-mind-blowing</a>
 					<a onclick="document.getElementById('verbs-input').value=this.innerHTML;">abode</a>
-			</div>
-		</div>
-		<div class="demo">
-			<h2>Adjectives</h2>
-			<div class="input">
-				<input id="adj-input" placeholder="write your adjective here">
-			</div>
-			<div id="adj-output" class="output">
-			</div>
-			<div class="try">
-				try:
-					<a onclick="document.getElementById('adj-input').value=this.innerHTML;">big</a>
-					<a onclick="document.getElementById('adj-input').value=this.innerHTML;">beautiful</a>
-					<a onclick="document.getElementById('adj-input').value=this.innerHTML;">shameful</a>
-					<a onclick="document.getElementById('adj-input').value=this.innerHTML;">good</a>
 			</div>
 		</div>
 		<script src="./demo/main.js"></script>
