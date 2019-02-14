@@ -3,87 +3,13 @@
 	<head>
 		<title>en-inflectors Demo</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-		<style>
-			body {
-				padding:12px;
-				margin:0 auto;
-				max-width:600px;
-				background: #E0E0E0;
-				font-family: 'Source Sans Pro', sans-serif;
-			}
-			h1 {
-				color:#424242;
-			}
-			.demo {
-				position: relative;
-				background: #FAFAFA;
-				padding:26px;
-				padding-bottom: 50px;
-				margin-bottom: 33px;
-				box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-			}
-			.demo h2 {
-				color:#424242;
-				margin: 0;
-				margin-bottom: 5px;
-				padding-bottom: 5px;
-				border-bottom: 1px solid #E0E0E0;
-				font-size: 17px;
-			}
-			.try {
-				font-size: 12px;
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				width: calc(100% - 10px);
-				background: #EEEEEE;
-				box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.25);
-				padding: 5px;
-			}
-			.try a {
-				color:#3F51B5;
-				cursor: pointer;
-			}
-			.input input {
-				margin-top: 25px;
-				padding: 15px 11px;
-				font-size: 13px;
-				border: none;
-				box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.08), -1px 4px 12px rgba(0, 0, 0, 0.15);
-				border-radius: 7px;
-				width: calc(100% - 22px);
-			}
-			.output {
-				margin-top:25px;
-			}
-			.output span {
-				display: inline-block;
-				padding:7px 14px;
-				border:1px solid red;
-				font-size: 13px;
-				margin-right:7px;
-				margin-top:7px;
-				border-radius: 5px;
-			}
-
-			.output span:nth-child(1) {border-color: #673AB7;}
-			.output span:nth-child(2) {border-color: #E91E6A;}
-			.output span:nth-child(3) {border-color: #2296F6;}
-			.output span:nth-child(4) {border-color: #FF9800;}
-			.output span:nth-child(5) {border-color: #009688;}
-		</style>
 	</head>
 	<body>
-		<h1>en-inflectors demo</h1>
 		<div class="demo">
 			<div class="input">
-				<div id="verbs-input"><?php
+				<div id="verbs-input" data-verb="<?php
 					echo $_GET["verb"]
-				?>
-				</div>
+				?>"></div>
 			</div>
 			<div id="verbs-output" class="output">
 			</div>

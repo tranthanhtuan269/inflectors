@@ -1147,7 +1147,7 @@
 	}
 
 	function a(type, e) {
-		return "'" + type + "':'" + e + "'";
+		return " '" + type + "' : '" + e + "'";
 	}
 	const s = t(6).Inflectors;
 	// i("verbs-input", function () {
@@ -1158,7 +1158,7 @@
 	// 		document.getElementById("verbs-output").innerHTML = t
 	// 	}
 	// })
-	var e = document.getElementById("verbs-input").innerHTML.trim();
+	var e = document.getElementById("verbs-input").getAttribute("data-verb").trim();
 	if (e) {
 		var r = new s(e),
 			json = "{" + a("toPresent", r.toPresent()) + "," + a("toPast", r.toPast()) + "," + a("toPastParticiple", r.toPastParticiple()) + "," + a("toGerund", r.toGerund()) + "," + a("toPresentS", r.toPresentS()) + "}",
