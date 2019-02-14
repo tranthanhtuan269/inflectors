@@ -1161,7 +1161,7 @@
 	var e = document.getElementById("verbs-input").innerHTML.trim();
 	if (e) {
 		var r = new s(e),
-			json = "{" + a("toPresent", r.toPresent()) + a("toPast", r.toPast()) + a("toPastParticiple", r.toPastParticiple()) + a("toGerund", r.toGerund()) + a("toPresentS", r.toPresentS()) + "}",
+			json = "{" + a("toPresent", r.toPresent()) + "," + a("toPast", r.toPast()) + "," + a("toPastParticiple", r.toPastParticiple()) + "," + a("toGerund", r.toGerund()) + "," + a("toPresentS", r.toPresentS()) + "}",
 			t = a(r.toPresent()) + a(r.toPast()) + a(r.toPastParticiple()) + "<br>" + a(r.toGerund()) + a(r.toPresentS());
 		document.getElementById("verbs-output").innerHTML = json
 	}
